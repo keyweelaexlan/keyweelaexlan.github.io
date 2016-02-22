@@ -453,7 +453,7 @@ yet online examples on how to use gensims doc2vec always use a single label, usu
 <p>Usually these methods produce a vector per document which can be used later to train a classifier for higher order categories. 
 In this blog post we try to perform such high level classification by assigning multiple labels per document directly. </p>
 <p>We used publicly available facebook posts (/feed end point) to collect 311k facebook page posts from 188 pages. 
-For each link post post we open its link and collect the clean page text using jusText and store it in the content field.
+For each link post we open its link and collect the clean page text using jusText and store it in the content field.
 We finally store all of these posts in one pandas dataframe.</p>
 <p>Since pages tend to publish content which isn't purely their style we break down each page's posts into groups by share rank percentile.
 For each page we rank the posts by how many shares they have and assign discreet ten percent interval bins. So a post which outperforms 93% of other posts
@@ -578,7 +578,7 @@ Our iterator makes sure that we sample from all pages and all percentiles for ea
 </div>
 
 </div></p>
-<p>For each label (facebook page or post) we get a vector in 300 dimensions. In order to easily visualise it and perform a sanity we do a TSNE manifold.</p>
+<p>For each label (facebook page or post) we get a vector in 300 dimensions. In order to easily visualise it and perform a sanity we do a TSNE manifold. Its a dimensionality reduction which preserves distances.</p>
 <p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
